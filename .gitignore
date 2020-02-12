@@ -1,0 +1,10 @@
+# ignore venv
+bot-env/
+
+__pycache__/
+
+*.json
+*.db
+*.log
+
+
