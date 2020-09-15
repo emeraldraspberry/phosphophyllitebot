@@ -22,9 +22,12 @@ class MyClient(discord.Client):
         super().__init__()
         self.database = database
         self.command = Command()
+        
 
     async def on_ready(self):
         logging.info(f'Logged on as {self.user}!')
+        activity = discord.Activity(type=discord.ActivityType.listening, name=" to .help")
+        await client.change_prescence(activity=activity)
 
     ###########################################################################
     #    DYNAMIC METHODS FOR DATABASE                                         #
