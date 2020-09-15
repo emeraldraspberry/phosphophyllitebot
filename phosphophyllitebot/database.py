@@ -11,7 +11,7 @@ class Database():
         # Establish connection to database.
         self.connection = sqlite3.connect('users.db')
         self.cursor = self.connection.cursor()
-        self.cursor.execute('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY)')
+        self.cursor.execute('CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY, name VARCHAR, status VARCHAR, status_time VARCHAR)')
 
     def cell(self):
         row = self.cursor.fetchone()
