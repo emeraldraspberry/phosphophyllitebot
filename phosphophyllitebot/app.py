@@ -77,5 +77,6 @@ class MyClient(discord.Client):
 
 if __name__ == "__main__":
     logging.basicConfig(level=logging.INFO)
+    logging.basicConfig(filename=bot_log)
     client = MyClient(database=Database())
     client.run(get_token())
